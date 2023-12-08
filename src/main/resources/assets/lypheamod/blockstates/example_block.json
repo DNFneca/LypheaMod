@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "lypheamod:block/example_block" }
+  }
+}
