@@ -74,15 +74,15 @@ public class DragonEntity extends AnimalEntity {
 		super.tick();
 		if(this.getWorld().isClient()) {
 			if(this.getHealth() != this.getMaxHealth()) {
-				String name = Color.Color(Color.GRAY) + "[" + Color.Color(Color.BLUE) + "Lv" + entityLevel + Color.Color(Color.GRAY) + "]" + Color.Color(Color.WHITE) + " Porcupine " + Color.Color(Color.RED) + this.getHealth() + Color.Color(Color.GRAY) + "/" + Color.Color(Color.RED) + this.getMaxHealth() + Color.Color(Color.DARK_RED) + "♥";
+				String name = Color.Color(Color.GRAY) + "[" + Color.Color(Color.BLUE) + "Lv" + this.entityLevel + Color.Color(Color.GRAY) + "]" + Color.Color(Color.WHITE) + " Porcupine " + Color.Color(Color.RED) + this.getHealth() + Color.Color(Color.GRAY) + "/" + Color.Color(Color.RED) + this.getMaxHealth() + Color.Color(Color.DARK_RED) + "♥";
 				this.setCustomName(Text.of(name));
 			}
 //            this.getDataTracker().get(TrackedData)
-			System.out.println(stage == 1 && this.getHealth() < this.getMaxHealth()*0.4 && transitionTime < 60);
-			System.out.println(transitionTime);
-			System.out.println(idleAnimationTimeout);
+			System.out.println(this.stage == 1 && this.getHealth() < this.getMaxHealth()*0.4 && this.transitionTime < 60);
+			System.out.println(this.transitionTime);
+			System.out.println(this.idleAnimationTimeout);
 
-			if(stage == 1 && this.getHealth() < this.getMaxHealth()*0.4 && transitionTime < 60) {
+			if(this.stage == 1 && this.getHealth() < this.getMaxHealth()*0.4 && this.transitionTime < 60) {
 				double d = this.random.nextGaussian() * 0.02;
 				double e = this.random.nextGaussian() * 0.02;
 				double f = this.random.nextGaussian() * 0.02;
@@ -94,7 +94,7 @@ public class DragonEntity extends AnimalEntity {
 				this.setGlowing(true);
 				this.setInvulnerable(true);
 				this.speed = 0;
-				transitionTime++;
+				this.transitionTime++;
 			} else {
 				this.setGlowing(true);
 				this.speed = 1;

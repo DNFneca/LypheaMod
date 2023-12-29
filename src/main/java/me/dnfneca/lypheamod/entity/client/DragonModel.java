@@ -14,7 +14,7 @@ public class DragonModel <T extends DragonEntity> extends SinglePartEntityModel<
 	private final ModelPart Head;
 	public DragonModel(ModelPart root) {
 		this.Model = root.getChild("Model");
-		this.Head = Model.getChild("Head");
+		this.Head = this.Model.getChild("Head");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
@@ -339,11 +339,11 @@ public class DragonModel <T extends DragonEntity> extends SinglePartEntityModel<
 	}
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		Model.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		this.Model.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart getPart() {
-		return Model;
+		return this.Model;
 	}
 }

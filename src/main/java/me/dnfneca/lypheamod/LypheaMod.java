@@ -5,11 +5,18 @@ import me.dnfneca.lypheamod.entity.custom.ArmadiloEntity;
 import me.dnfneca.lypheamod.entity.custom.PorcupineEntity;
 import me.dnfneca.lypheamod.event.PlayerTickHandler;
 import me.dnfneca.lypheamod.networking.ModMessages;
+import me.dnfneca.lypheamod.networking.packet.PlayerJoinManaSync;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerTickEvents;
+import net.fabricmc.fabric.api.event.server.ServerStartCallback;
+import net.fabricmc.fabric.api.networking.v1.PacketSender;
+import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.network.ServerPlayNetworkHandler;
 
 public class LypheaMod implements ModInitializer {
 
@@ -44,5 +51,6 @@ public class LypheaMod implements ModInitializer {
 		ModMessages.registerC2SPackets();
 //		ModMessages.registerS2CPackets();
 		ServerTickEvents.START_SERVER_TICK.register(new PlayerTickHandler());
+//		ServerPlayConnectionEvents.JOIN.register(new PlayerJoinManaSync());
 	}
 }

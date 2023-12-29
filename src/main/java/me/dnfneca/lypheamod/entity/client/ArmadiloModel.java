@@ -35,7 +35,7 @@ public class ArmadiloModel<T extends ArmadiloEntity> extends SinglePartEntityMod
 //	private final ModelPart hitbox;
 	public ArmadiloModel(ModelPart root) {
 		this.bs_vm_armadillo = root.getChild("bs_vm_armadillo");
-		this.head = bs_vm_armadillo.getChild("torso").getChild("head");
+		this.head = this.bs_vm_armadillo.getChild("torso").getChild("head");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
@@ -89,11 +89,11 @@ public class ArmadiloModel<T extends ArmadiloEntity> extends SinglePartEntityMod
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		bs_vm_armadillo.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		this.bs_vm_armadillo.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart getPart() {
-		return bs_vm_armadillo;
+		return this.bs_vm_armadillo;
 	}
 }

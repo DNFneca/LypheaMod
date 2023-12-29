@@ -1,4 +1,5 @@
 {
+  "death.attack.custom": "%1$s died from a custom damage type!",
   "item.tutorialmod.ruby": "Ruby",
   "item.tutorialmod.raw_ruby": "Raw Ruby",
   "item.tutorialmod.metal_detector": "Metal Detector",

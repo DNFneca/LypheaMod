@@ -76,9 +76,9 @@ public class PorcupineEntity extends AnimalEntity {
     @Override
     public boolean damage(DamageSource source, float amount) {
         if(source.getSource() instanceof PlayerEntity) {
-            System.out.println(takesDamage);
+            System.out.println(this.takesDamage);
             System.out.println(source);
-            if (takesDamage == false) {
+            if (this.takesDamage == false) {
                 return false;
             } else {
                 return super.damage(source, amount);
@@ -93,7 +93,7 @@ public class PorcupineEntity extends AnimalEntity {
         super.tick();
         if(this.getWorld().isClient()) {
             if(this.getHealth() != this.getMaxHealth()) {
-                String name = Color.Color(Color.GRAY) + "[" + Color.Color(Color.BLUE) + "Lv" + entityLevel + Color.Color(Color.GRAY) + "]" + Color.Color(Color.WHITE) + " Porcupine " + Color.Color(Color.RED) + this.getHealth() + Color.Color(Color.GRAY) + "/" + Color.Color(Color.RED) + this.getMaxHealth() + Color.Color(Color.DARK_RED) + "♥";
+                String name = Color.Color(Color.GRAY) + "[" + Color.Color(Color.BLUE) + "Lv" + this.entityLevel + Color.Color(Color.GRAY) + "]" + Color.Color(Color.WHITE) + " Porcupine " + Color.Color(Color.RED) + this.getHealth() + Color.Color(Color.GRAY) + "/" + Color.Color(Color.RED) + this.getMaxHealth() + Color.Color(Color.DARK_RED) + "♥";
                 this.setCustomName(Text.of(name));
             }
 //            this.getDataTracker().get(TrackedData)
@@ -101,11 +101,11 @@ public class PorcupineEntity extends AnimalEntity {
 //            System.out.println(this.isInvulnerable());
 
 //            this.writeNbt(NbtCompound.)
-            if(transitionTime == 0) {
-                takesDamage = true;
+            if(this.transitionTime == 0) {
+	            this.takesDamage = true;
             }
 
-            if(stage == 1 && this.getHealth() < this.getMaxHealth()*0.4 && transitionTime < 60) {
+            if(this.stage == 1 && this.getHealth() < this.getMaxHealth()*0.4 && this.transitionTime < 60) {
                 double d = this.random.nextGaussian() * 0.02;
                 double e = this.random.nextGaussian() * 0.02;
                 double f = this.random.nextGaussian() * 0.02;
@@ -118,8 +118,8 @@ public class PorcupineEntity extends AnimalEntity {
                 this.setInvulnerable(true);
                 this.takesDamage = false;
                 this.speed = 0;
-                transitionTime++;
-            } else if(transitionTime >= 60) {
+	            this.transitionTime++;
+            } else if(this.transitionTime >= 60) {
                 this.setGlowing(false);
                 this.speed = 1;
                 this.stage = 2;

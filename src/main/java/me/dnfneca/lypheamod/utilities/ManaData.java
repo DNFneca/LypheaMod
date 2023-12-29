@@ -3,9 +3,12 @@ package me.dnfneca.lypheamod.utilities;
 import me.dnfneca.lypheamod.networking.ModMessages;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.network.PacketByteBuf;
 import net.minecraft.server.network.ServerPlayerEntity;
+import net.minecraft.text.Text;
 
 public class ManaData {
 	public static double addMana(IEntityDataSaver player, int amount) {
@@ -34,6 +37,16 @@ public class ManaData {
 		nbt.putDouble("mana", mana);
 		syncMana(mana, (ServerPlayerEntity) player);
 		return mana;
+	}
+
+	public static double getMana(IEntityDataSaver player) {
+		NbtCompound nbt = player.getPersistentData();
+		return nbt.getDouble("mana");
+	}
+
+	public static double getMaxMana(IEntityDataSaver player) {
+		NbtCompound nbt = player.getPersistentData();
+		return nbt.getDouble("mana");
 	}
 
 	public static void syncMana(double mana, ServerPlayerEntity player) {

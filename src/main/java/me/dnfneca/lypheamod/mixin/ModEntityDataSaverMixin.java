@@ -18,20 +18,20 @@ public abstract class ModEntityDataSaverMixin implements IEntityDataSaver {
 		if(this.persistentData == null) {
 			this.persistentData = new NbtCompound();
 		}
-		return persistentData;
+		return this.persistentData;
 	}
 
 	@Inject(method = "writeNbt", at = @At("HEAD"))
 	protected void injectWriteMethod(NbtCompound nbt, CallbackInfoReturnable info) {
-		if(persistentData != null) {
-			nbt.put("lypheamod.kaupen_data", persistentData);
+		if(this.persistentData != null) {
+			nbt.put("lypheamod.kaupen_data", this.persistentData);
 		}
 	}
 
 	@Inject(method = "readNbt", at = @At("HEAD"))
 	protected void injectReadMethod(NbtCompound nbt, CallbackInfo info) {
 		if (nbt.contains("lypheamod.kaupen_data", 10)) {
-			persistentData = nbt.getCompound("lypheamod.kaupen_data");
+			this.persistentData = nbt.getCompound("lypheamod.kaupen_data");
 		}
 	}
 }

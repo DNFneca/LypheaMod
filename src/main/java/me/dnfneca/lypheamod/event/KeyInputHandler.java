@@ -7,6 +7,7 @@ import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;
 import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.util.InputUtil;
+import net.minecraft.network.PacketByteBuf;
 import org.lwjgl.glfw.GLFW;
 
 public class KeyInputHandler {
@@ -19,7 +20,9 @@ public class KeyInputHandler {
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			if(drinkingKey.wasPressed()) {
 				// ClientPlayNetworking.send(ModMessages.EXAMPLE_ID, PacketByteBufs.create());
-				ClientPlayNetworking.send(ModMessages.MANA_ID, PacketByteBufs.create());
+				PacketByteBuf buf = PacketByteBufs.create();
+				buf.writeInt(1);
+				ClientPlayNetworking.send(ModMessages.ADD_MANA_ID, buf);
 			}
 		});
 	}

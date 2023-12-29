@@ -16,7 +16,7 @@ public class PorcupineModel<T extends PorcupineEntity> extends SinglePartEntityM
 
 	public PorcupineModel(ModelPart root) {
 		this.porcupine = root.getChild("porcupine");
-		this.head = porcupine.getChild("body").getChild("torso").getChild("head");
+		this.head = this.porcupine.getChild("body").getChild("torso").getChild("head");
 	}
 
 	public static TexturedModelData getTexturedModelData() {
@@ -178,11 +178,11 @@ public class PorcupineModel<T extends PorcupineEntity> extends SinglePartEntityM
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		porcupine.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		this.porcupine.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart getPart() {
-		return porcupine;
+		return this.porcupine;
 	}
 }
