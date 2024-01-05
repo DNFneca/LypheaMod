@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "number=up": {
+      "model": "lypheamod:block/dice_1"
+    },
+    "number=north": {
+      "model": "lypheamod:block/dice_2"
+    },
+    "number=east": {
+      "model": "lypheamod:block/dice_3"
+    },
+    "number=south": {
+      "model": "lypheamod:block/dice_5"
+    },
+    "number=west": {
+      "model": "lypheamod:block/dice_4"
+    },
+    "number=down": {
+      "model": "lypheamod:block/dice_6"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "lypheamod:block/ruby_block"
+    }
+  }
+}

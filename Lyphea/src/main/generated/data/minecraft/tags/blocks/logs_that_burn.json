@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "lypheamod:chestnut_log",
+    "lypheamod:chestnut_wood",
+    "lypheamod:stripped_chestnut_log",
+    "lypheamod:stripped_chestnut_wood"
+  ]
+}

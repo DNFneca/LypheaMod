@@ -1,0 +1,12 @@
+// 1.20.4	2024-01-05T05:10:00.3315613	Lyphea Mod/Tags for minecraft:block
+8c34a2a5e1b5c567dfe50c2817dab63afd39b08e data\lypheamod\tags\blocks\metal_detector_detectable_blocks.json
+e579c06bcb9edd4827cd7621732d25cdb37f210e data\minecraft\tags\blocks\mineable\pickaxe.json
+a09ce122ff7fa45259844708da1c4c7b873176a4 data\fabric\tags\blocks\needs_tool_level_4.json
+63cff1d17e83ad19779022d27fd3d46804b66547 data\minecraft\tags\blocks\fences.json
+57e3844917b3f98dd4d0b9a81f1078647ceac97a data\minecraft\tags\blocks\needs_diamond_tool.json
+928f6b161e765048acea3767df0a3de548ff6f39 data\minecraft\tags\blocks\walls.json
+817a1574d41796acc56172dd6af4a2d115c8dac8 data\minecraft\tags\blocks\fence_gates.json
+0621d90f40b45c65ac8ee9d3e0adc22abfe66f0e data\fabric\tags\blocks\needs_tool_level_5.json
+e6bb284915ab594fc8292d2eee856c78af868213 data\minecraft\tags\blocks\needs_iron_tool.json
+731e9ade0b0c8296bb8ef12a354b64df69fd2e71 data\minecraft\tags\blocks\needs_stone_tool.json
+2fb36ad9f3eb747b426c2323e112aab9f3d26e3b data\minecraft\tags\blocks\logs_that_burn.json

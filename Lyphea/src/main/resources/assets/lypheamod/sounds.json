@@ -1,0 +1,46 @@
+{
+  "metal_detector_found_ore": {
+    "subtitle": "sounds.lypheamod.metal_detector_found_ore",
+    "sounds": [
+      "lypheamod:metal_detector_found_ore"
+    ]
+  },
+  "sound_block_break": {
+    "subtitle": "lypheamod.sound_block_break",
+    "sounds": [
+      "lypheamod:sound_block_break"
+    ]
+  },
+  "sound_block_step": {
+    "subtitle": "lypheamod.sound_block_step",
+    "sounds": [
+      "lypheamod:sound_block_step"
+    ]
+  },
+  "sound_block_place": {
+    "subtitle": "lypheamod.sound_block_place",
+    "sounds": [
+      "lypheamod:sound_block_place"
+    ]
+  },
+  "sound_block_hit": {
+    "subtitle": "lypheamod.sound_block_hit",
+    "sounds": [
+      "lypheamod:sound_block_hit"
+    ]
+  },
+  "sound_block_fall": {
+    "subtitle": "lypheamod.sound_block_fall",
+    "sounds": [
+      "lypheamod:sound_block_fall"
+    ]
+  },
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "lypheamod:bar_brawl",
+        "stream": true
+      }
+    ]
+  }
+}

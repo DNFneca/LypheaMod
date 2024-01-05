@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "lypheamod:block/ruby_slab"
+    },
+    "type=double": {
+      "model": "lypheamod:block/ruby_block"
+    },
+    "type=top": {
+      "model": "lypheamod:block/ruby_slab_top"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "lypheamod:gem_polishing",
+  "ingredients": [
+    {
+      "item": "lypheamod:raw_ruby"
+    }
+  ],
+  "output": {
+    "item": "lypheamod:ruby",
+    "count": 3
+  }
+}

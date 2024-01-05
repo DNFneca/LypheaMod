@@ -1,0 +1,46 @@
+{
+	"schemaVersion": 1,
+	"id": "lypheamod",
+	"version": "${version}",
+	"name": "Lyphea Mod",
+	"description": "A mod",
+	"authors": [
+		"DNFneca"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/lypheamod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"me.dnfneca.lypheamod.LypheaMod"
+		],
+		"client": [
+			"me.dnfneca.lypheamod.LypheaModClient"
+		],
+		"fabric-datagen": [
+			"me.dnfneca.lypheamod.LypheaModDataGenerator"
+		],
+		"rei_client": [
+			"me.dnfneca.lypheamod.compat.LypheaModREIClientPlugin"
+		],
+		"terrablender": [
+			"me.dnfneca.lypheamod.world.biome.ModTerrablenderAPI"
+		]
+	},
+	"mixins": [
+      "lypheamod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

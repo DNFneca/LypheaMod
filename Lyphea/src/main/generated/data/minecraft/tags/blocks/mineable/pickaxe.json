@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "lypheamod:raw_ruby_block",
+    "lypheamod:ruby_block",
+    "lypheamod:ruby_ore",
+    "lypheamod:deepslate_ruby_ore",
+    "lypheamod:nether_ruby_ore",
+    "lypheamod:end_stone_ruby_ore",
+    "lypheamod:sound_block"
+  ]
+}

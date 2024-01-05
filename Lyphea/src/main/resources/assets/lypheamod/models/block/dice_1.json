@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "lypheamod:block/dice_1",
+    "down": "lypheamod:block/dice_6",
+    "north": "lypheamod:block/dice_2",
+    "east": "lypheamod:block/dice_3",
+    "south": "lypheamod:block/dice_5",
+    "west": "lypheamod:block/dice_4",
+    "particle": "lypheamod:block/dice_1"
+  }
+}
